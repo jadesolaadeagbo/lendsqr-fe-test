@@ -1,0 +1,125 @@
+.signin{
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+.logo{
+  position: absolute; 
+  z-index: 50;
+  top: 100px;
+  left: 97px;
+}
+.signinLeft {
+  position: relative;
+  width: 50%;
+  height: 100vh;
+  background-color: #fbfbfb;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+}
+
+.signinImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 400px;
+}
+
+.signinRight{
+  font-family: "Avenir Next", sans-serif;
+  width: 35%;
+  padding-left: 100px;
+  background-color: #FFFFFF;
+
+  p{
+    color: #545F7D;
+  }
+
+  button{
+    background-color: #39CDCC;
+    padding: 10px 50px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+  }
+}
+
+.signinForm{
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  input{
+
+    padding: 10px 50px 10px 5px;
+    border-radius: 4px;
+    border: 2px solid #545F7D26;
+
+    &::placeholder { 
+      color: #545F7D;
+      opacity: 0.5;
+    }
+
+  }
+}
+
+.welcome{
+  color: #213F7D;
+  font-size: 40px; 
+  font-weight: 700; 
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%; 
+
+  input {
+    width: 100%; 
+    padding: 10px 50px 10px 5px;
+    border-radius: 4px;
+    border: 2px solid #545F7D26;
+
+    &::placeholder {
+      color: #545F7D;
+      opacity: 0.5;
+    }
+  }
+
+  .showPassword {
+    position: absolute;
+    right: 15px; 
+    font-size: 10px;
+    color: #39CDCC;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .signinLeft {
+    display: none;
+  }
+  .logo{
+    width: 100px;
+    height: 36px;
+    top: 20px;
+    left: 20px;
+  }
+
+  .signinRight {
+    width: 100%;
+    padding-left: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+  }
+}
