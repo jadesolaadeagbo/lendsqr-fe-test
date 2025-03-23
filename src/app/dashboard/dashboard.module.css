@@ -1,3 +1,16 @@
+:root {
+    --font-work-sans: "Work Sans", sans-serif;
+  }
+  
+::-webkit-scrollbar {
+    display: none;
+  }
+  
+body {
+    font-family: var(--font-work-sans);
+    margin-left: 250px;
+}
+
 .mainLayout{
     background-color: #fbfbfb;
     width: 100%;
@@ -10,15 +23,3 @@
 
 
 }
-body {
-    font-family: var(--font-work-sans);
-    margin-left: 250px;
-}
-
-:root {
-    --font-work-sans: "Work Sans", sans-serif;
-  }
-  
-  ::-webkit-scrollbar {
-    display: none;
-  }

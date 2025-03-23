@@ -1,10 +1,12 @@
 import React from 'react'
-import DashboardStats from '../components/DashboardStats'
+import DashboardStats from '../components/User/DashboardStats'
+import UserTable from '../components/User/UserTable'
 
 const page = () => {
   return (
-    <div style={{height:"1000px"}}>
+    <div>
       <DashboardStats/>
+      <UserTable/>
     </div>
   )
 }
