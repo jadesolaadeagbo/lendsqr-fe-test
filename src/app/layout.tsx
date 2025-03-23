@@ -37,6 +37,7 @@ export default function RootLayout({
     <body className={avenir.className}>
       {children}
       </body>
+      
     </html>
   );
 }

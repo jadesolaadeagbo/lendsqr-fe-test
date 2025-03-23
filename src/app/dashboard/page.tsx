@@ -2,7 +2,7 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div></div>
+    <div style={{height:"1000px"}}>This is the main content</div>
   )
 }
 

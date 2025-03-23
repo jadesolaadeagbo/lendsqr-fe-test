@@ -19,10 +19,17 @@ const Navbar = () => {
       </div>
       </div>
 
-      <div>
+      <div className={styles.navRight}>
         <Link href='#' className={styles.docslink}>Docs</Link>
         <Image src="/images/bell.png" alt="Bell icon" width={20} height={20}/>
-        <Image src="/images/avatar.svg" alt="Avatar icon" width={48} height={48}/>
+
+        <span className={styles.userAvatar}>
+          <Image src="/images/avatar.svg" alt="Avatar icon" width={48} height={48}/>
+          <span className={styles.avatarName}>
+            Adedeji
+            <Image src="/images/down.svg" alt="Downward icon" width={10} height={10}/>
+          </span>
+          </span>
 
 
       </div>
