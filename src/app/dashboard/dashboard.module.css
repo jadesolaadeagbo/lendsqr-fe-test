@@ -1,8 +1,24 @@
 .mainLayout{
     background-color: #fbfbfb;
+    width: 100%;
 
 }
-
-body {
+.container{
+    display: flex;
+    width: 100%;
     margin-top: 80px; 
+
+
 }
+body {
+    font-family: var(--font-work-sans);
+    margin-left: 250px;
+}
+
+:root {
+    --font-work-sans: "Work Sans", sans-serif;
+  }
+  
+  ::-webkit-scrollbar {
+    display: none;
+  }
