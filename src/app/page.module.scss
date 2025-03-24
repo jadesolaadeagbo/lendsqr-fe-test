@@ -53,6 +53,7 @@
     color: white;
     font-size: 12px;
     font-weight: 600;
+    cursor: pointer;
   }
 }
 
@@ -78,6 +79,20 @@
   color: #213F7D;
   font-size: 40px; 
   font-weight: 700; 
+}
+
+.emailWrapper {
+  input {
+    width: 100%; 
+    padding: 10px 50px 10px 5px;
+    border-radius: 4px;
+    border: 2px solid #545F7D26;
+
+    &::placeholder {
+      color: #545F7D;
+      opacity: 0.5;
+    }
+  }
 }
 
 .inputWrapper {
@@ -128,4 +143,21 @@
     justify-content: center;
     padding: 30px;
   }
+}
+
+.errorText {
+  color: #d9534f !important; 
+  font-size: 12px; 
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.inputError {
+  border: 1px solid #d9534f !important; 
+  background-color: #ffe6e6; 
+}
+
+.inputError:focus {
+  outline: none;
+  border-color: #c9302c; 
 }

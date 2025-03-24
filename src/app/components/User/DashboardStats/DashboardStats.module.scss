@@ -21,9 +21,11 @@ $box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
   }
 
   .statsContainer {
+    width: 94%;
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+    justify-content: space-between;
 
     .statsBox {
       background: white;
@@ -57,8 +59,8 @@ $box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
 
     @media (max-width: 768px) {
-      .statsBox {
-        width: 100%;
+      .dashboardContainer{
+        padding-left: 2.5%;
       }
     }
   }

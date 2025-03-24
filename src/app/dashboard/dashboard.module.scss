@@ -26,3 +26,9 @@ body {
   width: 100%;
   margin-top: $navbar-height;
 }
+
+@media (max-width: 768px) {
+  body{
+    margin-left: 200px;
+  }
+}

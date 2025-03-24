@@ -86,3 +86,10 @@ $border-color: rgba(84, 95, 125, 0.5);
   gap: 10px;
   padding-left: 5px;
 }
+
+
+@media (max-width: 768px) {
+  .searchInput {
+    width: 180px;
+  }
+}

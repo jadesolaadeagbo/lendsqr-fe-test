@@ -34,14 +34,12 @@ export default function Layout({
   children: React.ReactNode;
 }>) {
   return ( 
-    <html lang="en">
-      <body className={`${workSans.className} ${sfCompact.className}`}>
+    <div className={`${workSans.className} ${sfCompact.className}`}>
         <Navbar />
         <main className={styles.container}>
           <Sidebar />
           <section className={styles.mainLayout}>{children}</section>
         </main>
-      </body>
-    </html>
+      </div>
   );
 }

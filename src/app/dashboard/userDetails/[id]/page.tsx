@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import styles from "./UserDetails.module.scss"
-import UserCard from "../../../components/User/UserCard";
+import UserCard from "../../../components/User/UserCard/UserCard";
 
 const UserDetails = () => {
   const router = useRouter();

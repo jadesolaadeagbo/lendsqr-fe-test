@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import styles from "./OptionsMenu.module.scss";
 
 interface OptionsMenuProps {
-  rowId: string; // Unique identifier for the row
+  rowId: string; 
 }
 
 const OptionsMenu: React.FC<OptionsMenuProps> = ({ rowId }) => {
@@ -18,7 +18,7 @@ const OptionsMenu: React.FC<OptionsMenuProps> = ({ rowId }) => {
 
 
   const handleView = () => {
-    router.push(`/dashboard/userDetails/${rowId}`); // Navigates to the details page
+    router.push(`/dashboard/userDetails/${rowId}`); 
   };
 
   return (
