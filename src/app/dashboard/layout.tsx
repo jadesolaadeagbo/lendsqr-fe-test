@@ -1,6 +1,8 @@
+import React from 'react';
 import { Work_Sans } from 'next/font/google'; 
+import localFont from "next/font/local";
 import type { Metadata } from "next";
-import styles from "./dashboard.module.css"
+import styles from "./dashboard.module.scss"
 import Navbar from "../components/layout/Navbar";
 import Sidebar from "../components/layout/Sidebar";
 
@@ -9,6 +11,17 @@ const workSans = Work_Sans({
   weight: ['300','400','500', '700', '900'], 
   style: ['normal', 'italic'], 
 });
+
+const sfCompact = localFont({
+  src: [
+    {
+      path: "../../../public/font/SFCompactDisplay-Ultralight.otf",
+      weight: "100",
+      style: "normal",
+    }
+  ]
+});
+
 
 export const metadata: Metadata = {
     title: "Dashboard",
@@ -20,16 +33,13 @@ export default function Layout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
+  return ( 
     <html lang="en">
-      <body
-        className={workSans.className}
-      >
-        <Navbar/>
-
+      <body className={`${workSans.className} ${sfCompact.className}`}>
+        <Navbar />
         <main className={styles.container}>
-            <Sidebar/>
-            <section className={styles.mainLayout}>{children}</section>
+          <Sidebar />
+          <section className={styles.mainLayout}>{children}</section>
         </main>
       </body>
     </html>

@@ -1,5 +1,6 @@
 import { FC } from "react";
-import styles from "./Pagination.module.css";
+import React from "react";
+import styles from "./Pagination.module.scss";
 import Image from "next/image";
 
 interface PaginationProps {
@@ -55,17 +56,20 @@ const Pagination: FC<PaginationProps> = ({
             <Image src="/images/angleLeft.svg" width={10} height={10} alt="Angle Left"/>
 
         </button>
+        
+        <div className={styles.buttons}>
+          {generatePagination().map((page, index) => (
+            <button
+              key={index}
+              className={`${styles.numberButton} ${currentPage === page ? styles.active : ""}`}
+              onClick={() => typeof page === "number" && onPageChange(page)}
+              disabled={page === "..."}
+            >
+              {page}
+            </button>
+          ))}
+        </div>
 
-        {generatePagination().map((page, index) => (
-          <p
-            key={index}
-            className={`${styles.numberButton} ${currentPage === page ? styles.active : ""}`}
-            onClick={() => typeof page === "number" && onPageChange(page)}
-            disabled={page === "..."}
-          >
-            {page}
-          </p>
-        ))}
 
         <button
           className={styles.pageButton}

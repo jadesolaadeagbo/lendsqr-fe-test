@@ -1,0 +1,79 @@
+// Colors
+$text-primary: rgba(84, 95, 125, 1);
+$text-muted: rgba(84, 95, 125, 0.5);
+$text-disabled: rgba(33, 63, 125, 0.1);
+$border-color: #ddd;
+$bg-light: rgba(33, 63, 125, 0.1);
+
+.paginationContainer {
+  width: 94%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0 0 0;
+
+  .rowsSelector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: $text-primary;
+
+    select {
+      padding: 5px;
+      border: 1px solid $border-color;
+      border-radius: 4px;
+      cursor: pointer;
+      color: $text-primary;
+      font-weight: 700;
+      background-color: $bg-light;
+    }
+  }
+
+  .pagination {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+    .pageButton {
+      padding: 2px 4px;
+      border: 1px solid $border-color;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      color: rgba(84, 95, 125, 0.06);
+      transition: background 0.3s, color 0.3s;
+
+      &:hover {
+        cursor: pointer;
+        color: $text-primary;
+      }
+
+      &:disabled {
+        cursor: not-allowed;
+        opacity: 0.6;
+        color: $text-disabled;
+      }
+    }
+
+    .buttons{
+      button{
+        background-color: inherit !important;
+        border: none !important;
+        padding: 5px;
+      }
+    }
+
+    .numberButton {
+      cursor: pointer;
+      font-size: 14px;
+      color: $text-muted;
+      transition: background 0.3s, color 0.3s;
+    }
+
+  }
+
+  .active {
+    color: $text-primary !important;
+  }
+}

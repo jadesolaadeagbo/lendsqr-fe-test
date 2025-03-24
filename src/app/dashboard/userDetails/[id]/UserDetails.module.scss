@@ -1,0 +1,46 @@
+$font-work-sans: "Work Sans", sans-serif;
+$primary-color: #213F7D;
+
+.section{
+    font-family: $font-work-sans;
+    padding-top: 50px;
+    padding-left: 5%;
+    width: 95%;
+}
+
+.heading{
+    padding: 0px 0px 30px 0px;
+    button{
+        border: none;
+        background: none;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: $font-work-sans;
+        color: rgba(84, 95, 125, 1);
+        cursor: pointer;
+    }
+
+}
+
+.details{
+    display: flex;
+    justify-content: space-between;
+    font-family: $font-work-sans;
+
+
+    button{
+        border-radius: 8px;
+        padding: 10px 20px;
+        background-color: inherit;
+        font-family: $font-work-sans;
+        font-weight: 500;
+    }
+}
+
+.userDetails{
+    font-size: 24px;
+    font-weight: 500;
+    color: $primary-color;
+}

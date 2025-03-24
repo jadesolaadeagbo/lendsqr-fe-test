@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./DashboardStats.module.css";
+import styles from "./DashboardStats.module.scss";
 import Image from "next/image";
 
 const dashboardUser = "/images/dashboardUser.svg";

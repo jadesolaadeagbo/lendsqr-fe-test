@@ -1,0 +1,113 @@
+// Colors
+$text-primary: #545F7D;
+$border-light: #213F7D1A;
+$inactive-bg: rgba(84, 95, 125, 0.06);
+$pending-bg: rgba(233, 178, 0, 0.06);
+$active-bg: rgba(57, 205, 98, 0.06);
+$blacklisted-bg: rgba(228, 3, 59, 0.06);
+
+.tableContainer {
+  overflow-x: auto;
+  font-family: var(--font-work-sans);
+  padding-left: 5%;
+  padding-bottom: 50px;
+}
+
+.table {
+  width: 94%;
+  border-collapse: separate;
+  font-size: 14px;
+  background-color: white;
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 4px;
+  
+  // Move box-shadow inside a block to prevent the deprecation warning
+  & {
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .th, .firstTh {
+    padding: 10px 20px 10px 0px;
+    text-align: left;
+    background-color: white;
+    font-size: 12px;
+    color: $text-primary;
+    font-weight: bolder;
+  }
+
+  .th{
+    padding: 0px 20px;
+  }
+
+  .col, .difcol {
+    border-bottom: 1px solid $border-light;
+    text-align: left;
+  }
+
+  .col {
+    padding: 0px 20px;
+  }
+
+  .difcol {
+    padding: 20px 30px 20px 0px;
+    margin-left: 20px;
+  }
+
+  tr:last-child {
+    .col, .difcol {
+      border-bottom: none;
+    }
+  }
+
+  .rowContainer {
+    margin-left: 10px;
+    display: block;
+  }
+
+  .status {
+    padding: 5px 15px;
+    text-align: center;
+    border-radius: 100px;
+
+    &.inactive {
+      color: $text-primary;
+      background: $inactive-bg;
+    }
+
+    &.pending {
+      color: #f0ad4e;
+      background: $pending-bg;
+    }
+
+    &.active {
+      color: #39CD62;
+      background: $active-bg;
+    }
+
+    &.blacklisted {
+      color: #E4033B;
+      background: $blacklisted-bg;
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .tableRow {
+    td, th {
+      padding: 8px;
+    }
+  }
+
+  .pagination {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 420px) {
+  .table {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,100 @@
+$font-work-sans: "Work Sans", sans-serif;
+
+$primary-color: #213F7D;
+$secondary-color: #39CDCC;
+$text-color: #545F7D;
+$menu-bg-hover: rgba(57, 205, 204, 0.06);
+$shadow-color: rgba(0, 0, 0, 0.1);
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 60px;
+  width: 250px;
+  height: 100vh;
+  background-color: #fff;
+  box-shadow: 2px 0 10px $shadow-color;
+  padding: 20px 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  font-family: $font-work-sans;
+
+  .sidebarInner {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .section {
+    margin-bottom: 40px;
+
+    .sectionTitle {
+      font-size: 14px;
+      font-weight: 500;
+      color: $text-color;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      padding-left: 20px;
+    }
+  }
+
+  .menuItem {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 40px;
+    gap: 10px;
+    padding: 12px 15px;
+    font-size: 16px;
+    color: $primary-color;
+    text-decoration: none;
+    font-weight: 400;
+    transition: background 0.3s;
+    margin-top: 5px;
+    background-color: $menu-bg-hover;
+    border-left: 3px solid $secondary-color;
+
+    &:hover {
+      background-color: $menu-bg-hover;
+    }
+
+    svg {
+      font-size: 18px;
+      color: $primary-color;
+    }
+  }
+
+  .disabled {
+    opacity: 0.6;
+    pointer-events: none; // Disables clicks
+    background-color: white;
+    border-left: none;
+  }
+
+  .dashboardItem {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 40px;
+    gap: 10px;
+    padding: 12px 15px;
+    font-size: 16px;
+    color: $primary-color;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s;
+    margin-top: 5px;
+  }
+
+  @media (max-width: 768px) {
+    width: 200px;
+    padding: 10px;
+
+    .menuItem,
+    .dashboardItem {
+      padding: 10px;
+      font-size: 14px;
+    }
+  }
+}
