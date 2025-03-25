@@ -37,9 +37,9 @@ NEXT_PUBLIC_API_KEY=your_api_key_here
 
 Start the development server with the following command:
 
-# npm run dev
-or    
-# yarn dev
+npm run dev
+or      
+yarn dev
 
 Then, open http://localhost:3000 in your browser to view the application.
 
