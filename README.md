@@ -1,27 +1,41 @@
 ## Lendsqr Assessment Docs
 
 ## Technologies Used
-Next.js – Handles routing, rendering, and managing cookies and fonts.
-
-TypeScript – Provides type safety and improved code maintainability.
-
-SCSS – Used for styling and better modularity.
-
-JSON Generator – Generates mock APIs for testing purposes.
-
-Vercel – Deployment platform for seamless hosting and performance.
+- Next.js – Handles routing, rendering, and managing cookies and fonts.
+- TypeScript – Provides type safety and improved code maintainability.
+- SCSS – Used for styling and better modularity.
+- JSON Generator – Generates mock APIs for testing purposes.
+- Vercel – Deployment platform for seamless hosting and performance.
 
 ## Features and Functionalities
-- Simple form validation: A user is required to login using a valid email and a password not less than 6 characters
-- Mobile Responsiveness: Ensuring a seamless user experience across all mobile devices.- Pagination
-- Mock User Authentication: A logged in user session is stored using cookies for a day, after which they are automatically logged out
-- Protected Routing: Only logged in users can view dashboard and other user details
+- Form Validation – Users must log in with a valid email and a password of at least six characters.
+
+- Mobile Responsiveness – Ensures a seamless experience across all mobile devices.
+
+- Pagination – Enables efficient navigation through large data sets.
+
+- Mock User Authentication – User sessions are stored in cookies for 24 hours, after which they are automatically logged out.
+
+- Protected Routing – Only authenticated users can access the dashboard and user details.
 
 ## Getting Started
 
-First, run the development server:
+## Installation
 
-```bash
+First, install the dependencies:
+
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+
+## Running the Development Server
+
+Start the development server with the following command:
+
 npm run dev
 # or
 yarn dev
@@ -29,11 +43,28 @@ yarn dev
 pnpm dev
 # or
 bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then, open http://localhost:3000 in your browser to view the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Editing the Project
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+You can modify the application by editing app/page.tsx. Changes will be automatically reflected in the browser.
+
+## Fonts Optimization
+
+This project uses next/font to automatically optimize and load Geist, a modern font family provided by Vercel.
+
+## Deployment
+
+The application is deployed on Vercel for production. To deploy your own version, run:
+
+vercel
+
+Follow the prompts to complete the deployment.
+
+## License
+
+This project is open-source and available for modification and distribution.
+
+
 
