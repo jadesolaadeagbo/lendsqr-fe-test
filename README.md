@@ -32,17 +32,22 @@ pnpm install
 or
 bun install
 
+## Environment Variables
+Create a .env.local file in the root of your project and add the following:
+
+NEXT_PUBLIC_API_KEY=your_api_key_here
+
 ## Running the Development Server
 
 Start the development server with the following command:
 
-npm run dev
+# npm run dev
 or
-yarn dev
+# yarn dev
 or
-pnpm dev
+# pnpm dev
 or
-bun dev
+# bun dev
 
 Then, open http://localhost:3000 in your browser to view the application.
 
