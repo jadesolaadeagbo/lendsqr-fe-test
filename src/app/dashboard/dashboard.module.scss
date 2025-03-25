@@ -3,12 +3,6 @@ $font-primary: "Work Sans", sans-serif;
 $sidebar-width: 250px;
 $navbar-height: 80px;
 
-:root {
-  --font-work-sans: #{$font-primary};
-}
-
-
-
 body {
   font-family: $font-primary;
 }
