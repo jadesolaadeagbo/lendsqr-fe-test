@@ -8,7 +8,7 @@ import UserCard from "../../../components/User/UserCard/UserCard";
 const UserDetails = () => {
   const router = useRouter();
   const redirectUser = () =>{
-    router.push(`/dashboard`); // Navigates to the details page
+    router.push(`/dashboard`); 
   }
   return (
     <section className={styles.section}>

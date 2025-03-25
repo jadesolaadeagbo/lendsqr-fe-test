@@ -20,3 +20,5 @@ export const reports = "/images/reports.svg";
 export const preferences = "/images/preferences.svg";
 export const feesPricing = "/images/feesPricing.svg";
 export const auditLogs = "/images/auditLogs.svg";
+export const systemMessages = "/images/systemMessages.svg";
+export const logout = "/images/logout.svg";

@@ -85,6 +85,21 @@ $blacklisted-bg: rgba(228, 3, 59, 0.06);
   }
 }
 
+.loader{
+  width: 94%;
+  font-size: 25px;
+  background-color: white;
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 4px;
+  font-family: var(--font-work-sans);
+  margin-bottom: 20px;
+  height: 70vh;
+  display: flex; 
+  justify-content: center;
+  align-items: center ;
+}
+
 // Responsive Design
 @media (max-width: 768px) {
   .tableContainer {

@@ -1,14 +1,17 @@
+"use client"
 import React from 'react'
 import DashboardStats from '../components/User/DashboardStats/DashboardStats'
 import UserTable from '../components/User/UserTable/UserTable'
 
-const page = () => {
+const DashboardPage = () => {
+  
   return (
     <div>
       <DashboardStats/>
       <UserTable/>
+
     </div>
   )
 }
 
-export default page
+export default DashboardPage

@@ -1,15 +1,17 @@
-import React from 'react';
-import { Work_Sans } from 'next/font/google'; 
+"use client";
+import React, { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import Cookies from "js-cookie";
+import { Work_Sans } from "next/font/google";
 import localFont from "next/font/local";
-import type { Metadata } from "next";
-import styles from "./dashboard.module.scss"
+import styles from "./dashboard.module.scss";
 import Navbar from "../components/layout/Navbar";
 import Sidebar from "../components/layout/Sidebar";
 
 const workSans = Work_Sans({
-  subsets: ['latin'], 
-  weight: ['300','400','500', '700', '900'], 
-  style: ['normal', 'italic'], 
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700", "900"],
+  style: ["normal", "italic"],
 });
 
 const sfCompact = localFont({
@@ -18,28 +20,55 @@ const sfCompact = localFont({
       path: "../../../public/font/SFCompactDisplay-Ultralight.otf",
       weight: "100",
       style: "normal",
-    }
-  ]
+    },
+  ],
 });
 
 
-export const metadata: Metadata = {
-    title: "Dashboard",
-    description: "User dashboard",
-  };
 
 export default function Layout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return ( 
-    <div className={`${workSans.className} ${sfCompact.className}`}>
-        <Navbar />
-        <main className={styles.container}>
-          <Sidebar />
-          <section className={styles.mainLayout}>{children}</section>
-        </main>
+}: Readonly<{ children: React.ReactNode }>) {
+  const [loading, setLoading] = useState(true);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const router = useRouter();
+
+  useEffect(() => {
+    const auth = Cookies.get("auth");
+
+    if (!auth) {
+      router.replace("/"); // Redirect unauthenticated users
+    } else {
+      setIsAuthenticated(true);
+    }
+
+    setLoading(false);
+  }, [router]);
+
+  if (loading) {
+    return (
+      <div
+        style={{
+          height: "100vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        Loading...
       </div>
+    );
+  }
+
+  if (!isAuthenticated) return null; // Prevent rendering if user is not authenticated
+
+  return (
+    <div className={`${workSans.className} ${sfCompact.className}`}>
+      <Navbar />
+      <main className={styles.container}>
+        <Sidebar />
+        <section className={styles.mainLayout}>{children}</section>
+      </main>
+    </div>
   );
 }

@@ -7,18 +7,17 @@ $navbar-height: 80px;
   --font-work-sans: #{$font-primary};
 }
 
-::-webkit-scrollbar {
-  display: none;
-}
+
 
 body {
   font-family: $font-primary;
-  margin-left: $sidebar-width;
 }
 
 .mainLayout {
   background-color: $primary-bg;
   width: 100%;
+  margin-left: $sidebar-width;
+
 }
 
 .container {
@@ -28,7 +27,5 @@ body {
 }
 
 @media (max-width: 768px) {
-  body{
-    margin-left: 200px;
-  }
+
 }

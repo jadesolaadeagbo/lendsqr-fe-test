@@ -1,19 +1,31 @@
 "use client"
-import React,{useState} from "react";
+import React,{useState, useEffect} from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import styles from "./page.module.scss";
+import Cookies from "js-cookie"
 
 export default function Home() {
   
-  // Form State
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState({ email: "", password: "" });
-  const [showPassword, setShowPassword] = useState(false); // Toggle state
+  const [showPassword, setShowPassword] = useState(false); 
 
-  
+  const [loading, setLoading] = useState(true); 
+
   const router = useRouter();
+
+  useEffect(() => {
+    const auth = Cookies.get("auth");
+
+    if (auth) {
+      router.replace("/dashboard"); 
+    } else {
+      setLoading(false)
+    }
+  }, [router]);
 
   
   const validateForm = () => {
@@ -41,12 +53,16 @@ export default function Home() {
     e.preventDefault();
     
     if (validateForm()) {
-      console.log("Form submitted:", { email, password });
       setTimeout(() => {
+        Cookies.set("auth", JSON.stringify({ email }), { expires: 1 });
         router.push("/dashboard");
       }, 1000);
     }
   };
+
+  if (loading) {
+    return <div style={{ height: "100vh", display: "flex", justifyContent: "center", alignItems: "center" }}>Loading...</div>;
+  }
 
   return (
     <div className={styles.signin}>
@@ -55,7 +71,7 @@ export default function Home() {
       <div className={styles.signinLeft}>
 
         <div className={styles.signinImage}>
-          <img src="/images/signin.png" alt="Signin" style={{ width: "100%", height: "350px" }} />
+          <Image src="/images/signin.png" alt="Signin" width={800} height={350} />
         </div>
       </div>
 

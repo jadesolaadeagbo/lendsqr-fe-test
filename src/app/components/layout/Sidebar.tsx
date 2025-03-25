@@ -1,7 +1,8 @@
 import React from 'react'
-import Link from 'next/link';
 import Image from 'next/image';
 import styles from "./Sidebar.module.scss"
+import Cookies from "js-cookie"
+import { useRouter } from 'next/navigation'
 import {
   switchOrg,
   dashboard,
@@ -24,10 +25,13 @@ import {
   reports,
   preferences,
   feesPricing,
-  auditLogs
+  auditLogs, 
+  systemMessages,
+  logout
 } from "../../utils";
 
 const Sidebar = () => {
+  const router = useRouter();
 
   const menuItems = [
     { section: "CUSTOMERS", options: [
@@ -54,8 +58,11 @@ const Sidebar = () => {
     { section: "SETTINGS", options: [
       { icon: preferences, label: "Preferences", disabled: true },
       { icon: feesPricing, label: "Fees and Pricing", disabled: true },
-      { icon: auditLogs, label: "Audit Logs", disabled: true }
-    ]}
+      { icon: auditLogs, label: "Audit Logs", disabled: true },
+      { icon: systemMessages, label: "System Messages", disabled: true },
+      
+    ]},
+
   ];
 
   return (
@@ -81,6 +88,20 @@ const Sidebar = () => {
             ))}
           </div>
         ))}
+        <div className={styles.logoutSection}>
+            <button
+            className={`${styles.logoutItem}`}
+              onClick={() => {
+                Cookies.remove("auth"); 
+                router.push("/");
+              }}
+            >
+                <Image src={logout} width={20} height={20} alt="Logout user"/> <span>Logout</span>
+              </button>
+
+            <p>v1.2.0</p>
+
+        </div>
       </div>
     </aside>
   )

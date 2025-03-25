@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import React from "react";
 import { fetchUsers } from "../../../services/fetchUsers";
 import styles from "./UserTable.module.scss";
-import Image from "next/image";
 import Pagination from "../Pagination/Pagination";
 import OptionsMenu from "../OptionsMenu/OptionsMenu";
 import FilterPopup from "../FilterPopup/FilterPopup";
@@ -26,7 +25,6 @@ const UserTable = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [rowsPerPage, setRowsPerPage] = useState(10);
 
-  const [filterOpen, setFilterOpen] = useState<boolean>(false);
 
 
 
@@ -41,7 +39,14 @@ const UserTable = () => {
     loadUsers();
   }, []);
 
-  if (loading) return <p>Loading users...</p>;
+  if (loading) {
+    return <div className={styles.loader}>Loading...</div>;
+  }
+
+  if(!users){
+    return <div className={styles.loader}>No user found</div>;
+
+  }
 
 
 
