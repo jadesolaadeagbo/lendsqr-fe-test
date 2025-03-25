@@ -4,13 +4,8 @@ import Image from "next/image";
 import UserProfile from "../UserProfile/UserProfile";
 import { useParams } from "next/navigation";
 import { fetchUserDetails } from "../../../services/fetchUserDetails";
+import { User } from "../../../services/fetchUserDetails";
 
-interface User {
-  personalInformation: Record<string, string>;
-  educationEmployment: Record<string, string>;
-  socials: Record<string, string>;
-  guarantor: { [key: string]: string }[];
-}
 
 const UserCard = () => {
   const [selectedTab, setSelectedTab] = useState<string>("General Details");
@@ -26,13 +21,13 @@ const UserCard = () => {
     const storedUser = localStorage.getItem(`user-${id}`);
 
     if (storedUser) {
-      setUser(JSON.parse(storedUser)); // Load user from localStorage
+      setUser(JSON.parse(storedUser)); 
       setLoading(false);
     } else {
       fetchUserDetails(id as string)
         .then((data) => {
           setUser(data as User  | null);
-          localStorage.setItem(`user-${id}`, JSON.stringify(data)); // Store in localStorage
+          localStorage.setItem(`user-${id}`, JSON.stringify(data)); 
         })
         .finally(() => setLoading(false));
     }
@@ -51,7 +46,7 @@ const UserCard = () => {
 
           <div className={styles.minicards}>
             <div className={styles.firstminicard}>
-              <h1>{user?.personalInformation?.["FULL NAME"]}</h1>
+              <h1>{user?.personalInformation?.fullName}</h1>
               <p>LSQFf587g90</p>
             </div>
 
@@ -65,7 +60,7 @@ const UserCard = () => {
             </div>
 
             <div className={styles.thirdminicard}>
-              <h1>{user?.educationEmployment?.["MONTHLY INCOME"]}</h1>
+              <h1>{user?.educationEmployment?.monthlyIncome}</h1>
               <p>9912345678/Providus Bank</p>
             </div>
           </div>

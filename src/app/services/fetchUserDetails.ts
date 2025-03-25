@@ -1,3 +1,39 @@
+export interface User{
+  id: number,
+  personalInformation: {
+    fullName: string,
+    phoneNumber: number,
+    email: string;
+    bvn: number;
+    gender: string;
+    maritalStatus: string;
+    children: number;
+    typeOfResidence: string;
+  },
+  educationEmployment: {
+    levelOfEducation: string;
+    employmentStatus: string;
+    sectorOfEmployment: string;
+    durationOfEmployment: string;
+    officeEmail: string;
+    monthlyIncome: string;
+    loanRepayment: number;
+  },
+  socials: {
+    twitter: string;
+    facebook: string;
+    instagram: string;
+  },
+  guarantor: 
+    {
+      fullName: string;
+      phoneNumber: string;
+      email: string;
+      relationship: string;
+    }[];
+  
+}
+
 export const fetchUserDetails = async (userId: string) => {
     try {
       const API_URL = "https://api.json-generator.com/templates/eKj4Hno4VZsM/data";
@@ -12,7 +48,7 @@ export const fetchUserDetails = async (userId: string) => {
       }
   
       // const users = await response.json();
-      const users = (await response.json()) as unknown as { id: number }[];
+      const users = (await response.json()) as User[];
 
   
       console.log("Fetched Users:", users.slice(0, 5)); 
