@@ -2,13 +2,22 @@ import React, { useState } from "react";
 import Image from "next/image";
 import styles from "./FilterPopup.module.scss"; // Ensure you create this CSS file
 
+interface Filters {
+  organization: string;
+  username: string;
+  email: string;
+  dateJoined: string;
+  phone: string;
+  status: string;
+}
+
 interface FilterPopupProps {
-  onApply:  (filters: unknown) => void;
+  onApply: (filters: Filters) => void;
 }
 
 const FilterPopup: React.FC<FilterPopupProps> = ({ onApply }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [filters, setFilters] = useState({
+  const [filters, setFilters] = useState<Filters>({
     organization: "",
     username: "",
     email: "",
@@ -16,6 +25,7 @@ const FilterPopup: React.FC<FilterPopupProps> = ({ onApply }) => {
     phone: "",
     status: "",
   });
+  
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     setFilters({ ...filters, [e.target.name]: e.target.value });

@@ -71,7 +71,7 @@ export default function Home() {
       <div className={styles.signinLeft}>
 
         <div className={styles.signinImage}>
-          <Image src="/images/signin.png" alt="Signin" width={800} height={350} />
+          <Image src="/images/signin.png" alt="Signin" width={800} height={350}   style={{ width: "100%", height: "auto" }}  priority/>
         </div>
       </div>
 
