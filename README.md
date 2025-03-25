@@ -46,12 +46,12 @@ Then, open http://localhost:3000 in your browser to view the application.
 ## Project Structure
 src/  
 │── app/  
-│   ├── components/      # Reusable UI components  
-│   ├── dashboard/       # Dashboard-related pages and components  
-│   ├── services/        # API calls and data-fetching logic  
-│   ├── utils/           # Helper functions and utilities  
-│   ├── layout.tsx       # Global layout configuration (imports fonts, wrappers)  
-│   ├── page.tsx         # Root page of the application  
+│   ├── components/             # Reusable UI components  
+│   ├── dashboard/              # Dashboard-related pages and components  
+│   ├── services/               # API calls and data-fetching logic  
+│   ├── utils/                  # Helper functions and utilities  
+│   ├── layout.tsx              # Global layout configuration (imports fonts, wrappers)  
+│   ├── page.tsx                # Root page of the application  
 
 
 - components/: Houses UI elements like the navbar, sidebar, table, and cards.
