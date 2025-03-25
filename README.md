@@ -1,18 +1,21 @@
 ## Lendsqr Assessment Docs
 
-##Technologies Used
-- NextJs: Routing, rendering and managing cookies, fonts
-- TypeScript: Type checking
-- SCSS: Styling
-- JSON Generator : Generating MOCK APIs
-- Vercel: Deployment
+## Technologies Used
+Next.js – Handles routing, rendering, and managing cookies and fonts.
 
-##Features and Functionalities
-- Simple form validation
-- Mobile Responsiveness
-- Pagination
-- Mock User Authentication
-- Protected Routing
+TypeScript – Provides type safety and improved code maintainability.
+
+SCSS – Used for styling and better modularity.
+
+JSON Generator – Generates mock APIs for testing purposes.
+
+Vercel – Deployment platform for seamless hosting and performance.
+
+## Features and Functionalities
+- Simple form validation: A user is required to login using a valid email and a password not less than 6 characters
+- Mobile Responsiveness: Ensuring a seamless user experience across all mobile devices.- Pagination
+- Mock User Authentication: A logged in user session is stored using cookies for a day, after which they are automatically logged out
+- Protected Routing: Only logged in users can view dashboard and other user details
 
 ## Getting Started
 
