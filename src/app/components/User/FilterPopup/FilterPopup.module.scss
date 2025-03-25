@@ -1,70 +1,65 @@
+$font-work-sans: 'Work Sans', sans-serif;
 
-$font-work-sans: "Work Sans", sans-serif;
+.popup {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 230px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  position: absolute;
 
-  .popup {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 230px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    position: absolute;
+  input,
+  select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid rgba(33, 63, 125, 0.4);
+    border-radius: 8px;
 
-    input, select {
-        width: 100%;
-        padding: 8px;
-        margin: 5px 0;
-        border: 1px solid rgba(33, 63, 125, 0.4);
-        border-radius: 8px;
-
-        &::placeholder{
-            color: rgba(33, 63, 125, 0.4);
-        }
-      }
-
-      label{
-        text-transform: capitalize;
-      }
+    &::placeholder {
+      color: rgba(33, 63, 125, 0.4);
+    }
   }
-  
-  .selectText{
-    color: rgba(33, 63, 125, 0.4) !important;
 
+  label {
+    text-transform: capitalize;
   }
- 
-  
-  /* Filter Icon */
-  .filterIcon {
+}
+
+.selectText {
+  color: rgba(33, 63, 125, 0.4) !important;
+}
+
+/* Filter Icon */
+.filterIcon {
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+
+  button {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
-    margin-left: 5px;
+    font-family: $font-work-sans;
+    font-weight: 500;
   }
-  
-  /* Buttons */
-  .buttons {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
+}
 
-    button {
-        padding: 8px 20px;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        font-family: $font-work-sans;
-        font-weight: 500;
-      }
-  }
-  
+.reset {
+  color: rgba(84, 95, 125, 1);
+  border: 1px solid rgba(84, 95, 125, 1) !important;
+  background-color: inherit;
+}
 
-  
-  .reset {
-    color: rgba(84, 95, 125, 1);
-    border: 1px solid rgba(84, 95, 125, 1) !important;
-    background-color: inherit;
-  }
-  
-  .apply {
-    background: rgba(57, 205, 204, 1);
-    color: white;
-  }
-  
+.apply {
+  background: rgba(57, 205, 204, 1);
+  color: white;
+}

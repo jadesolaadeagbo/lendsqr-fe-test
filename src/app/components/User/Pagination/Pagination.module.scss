@@ -59,8 +59,8 @@ $bg-light: rgba(33, 63, 125, 0.1);
       }
     }
 
-    .buttons{
-      button{
+    .buttons {
+      button {
         background-color: inherit !important;
         border: none !important;
         padding: 5px;
@@ -73,7 +73,6 @@ $bg-light: rgba(33, 63, 125, 0.1);
       color: $text-muted;
       transition: background 0.3s, color 0.3s;
     }
-
   }
 
   .active {
@@ -81,9 +80,8 @@ $bg-light: rgba(33, 63, 125, 0.1);
   }
 }
 
-
-@media(max-width: 1024px){
-  .paginationContainer{
+@media (max-width: 1024px) {
+  .paginationContainer {
     width: 100%;
     padding-right: 5%;
   }

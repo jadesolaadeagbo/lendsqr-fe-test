@@ -1,64 +1,62 @@
-$font-work-sans: "Work Sans", sans-serif;
-$primary-color: #213F7D;
+$font-work-sans: 'Work Sans', sans-serif;
+$primary-color: #213f7d;
 
-.section{
-    font-family: $font-work-sans;
-    padding-top: 50px;
-    padding-left: 5%;
-    width: 95%;
+.section {
+  font-family: $font-work-sans;
+  padding-top: 50px;
+  padding-left: 5%;
+  width: 95%;
 }
 
-.heading{
-    padding: 0px 0px 30px 0px;
-    button{
-        border: none;
-        background: none;
-        font-size: 16px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-family: $font-work-sans;
-        color: rgba(84, 95, 125, 1);
-        cursor: pointer;
-    }
-
-}
-
-.details{
+.heading {
+  padding: 0px 0px 30px 0px;
+  button {
+    border: none;
+    background: none;
+    font-size: 16px;
     display: flex;
-    justify-content: space-between;
-    font-family: $font-work-sans;
     align-items: center;
-    height: 100%;
-
-
-    button{
-        border-radius: 8px;
-        padding: 10px 20px;
-        background-color: inherit;
-        font-family: $font-work-sans;
-        font-weight: 500;
-    }
+    gap: 10px;
+    font-family: $font-work-sans;
+    color: rgba(84, 95, 125, 1);
+    cursor: pointer;
+  }
 }
 
-.userDetails{
-    font-size: 24px;
+.details {
+  display: flex;
+  justify-content: space-between;
+  font-family: $font-work-sans;
+  align-items: center;
+  height: 100%;
+
+  button {
+    border-radius: 8px;
+    padding: 10px 20px;
+    background-color: inherit;
+    font-family: $font-work-sans;
     font-weight: 500;
-    color: $primary-color;
+  }
 }
 
-  @media(max-width: 1024px){
-    .details{
-      width: 75%;
-    }
-  }
+.userDetails {
+  font-size: 24px;
+  font-weight: 500;
+  color: $primary-color;
+}
 
-  @media(max-width: 480px){
-    .details{
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: start;
-      gap: 10px;
-    }
+@media (max-width: 1024px) {
+  .details {
+    width: 75%;
   }
+}
+
+@media (max-width: 480px) {
+  .details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+  }
+}

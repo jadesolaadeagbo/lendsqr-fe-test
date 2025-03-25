@@ -1,6 +1,6 @@
 // Colors
-$text-primary: #545F7D;
-$border-light: #213F7D1A;
+$text-primary: #545f7d;
+$border-light: #213f7d1a;
 $inactive-bg: rgba(84, 95, 125, 0.06);
 $pending-bg: rgba(233, 178, 0, 0.06);
 $active-bg: rgba(57, 205, 98, 0.06);
@@ -11,7 +11,6 @@ $blacklisted-bg: rgba(228, 3, 59, 0.06);
   font-family: var(--font-work-sans);
   padding-left: 5%;
   padding-bottom: 2px;
-
 }
 
 .table {
@@ -23,12 +22,12 @@ $blacklisted-bg: rgba(228, 3, 59, 0.06);
   padding: 20px;
   border-radius: 4px;
 
-  
   & {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
   }
 
-  .th, .firstTh {
+  .th,
+  .firstTh {
     padding: 5px 20px 5px 0px;
     text-align: left;
     background-color: white;
@@ -37,16 +36,16 @@ $blacklisted-bg: rgba(228, 3, 59, 0.06);
     font-weight: bolder;
   }
 
-  .th{
+  .th {
     padding-left: 5px;
   }
 
-  .col, .difcol {
+  .col,
+  .difcol {
     border-bottom: 1px solid $border-light;
     text-align: left;
     padding: 0px 5px;
     font-weight: 400;
-
   }
 
   .difcol {
@@ -55,7 +54,8 @@ $blacklisted-bg: rgba(228, 3, 59, 0.06);
   }
 
   tr:last-child {
-    .col, .difcol {
+    .col,
+    .difcol {
       border-bottom: none;
     }
   }
@@ -81,18 +81,18 @@ $blacklisted-bg: rgba(228, 3, 59, 0.06);
     }
 
     &.active {
-      color: #39CD62;
+      color: #39cd62;
       background: $active-bg;
     }
 
     &.blacklisted {
-      color: #E4033B;
+      color: #e4033b;
       background: $blacklisted-bg;
     }
   }
 }
 
-.loader{
+.loader {
   width: 94%;
   background-color: white;
   margin-top: 30px;
@@ -102,9 +102,9 @@ $blacklisted-bg: rgba(228, 3, 59, 0.06);
   font-family: var(--font-work-sans);
   margin-bottom: 20px;
   height: 70vh;
-  display: flex; 
+  display: flex;
   justify-content: center;
-  align-items: center ;
+  align-items: center;
 }
 
 // Responsive Design
@@ -116,28 +116,28 @@ $blacklisted-bg: rgba(228, 3, 59, 0.06);
   }
   .table {
     width: 100%;
-    min-width: 800px; 
+    min-width: 800px;
   }
 
-  .firstTh,.th{
-    p{
+  .firstTh,
+  .th {
+    p {
       display: flex;
       align-items: center;
       height: 100%;
     }
   }
 }
-@media(max-width: 1024px){
+@media (max-width: 1024px) {
   .tableContainer .table {
     // display: block;
     // max-width: 100%;
     overflow-x: auto;
   }
 
-  .table{
+  .table {
     font-size: 12px;
     width: 100% !important;
-
   }
 }
 @media (max-width: 480px) {

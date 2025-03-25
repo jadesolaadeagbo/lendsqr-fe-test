@@ -1,9 +1,7 @@
+$font-work-sans: 'Work Sans', sans-serif;
 
-$font-work-sans: "Work Sans", sans-serif;
-
-
-$primary-color: #213F7D;
-$secondary-text-color: #545F7D;
+$primary-color: #213f7d;
+$secondary-text-color: #545f7d;
 $box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 
 .dashboardContainer {
@@ -57,30 +55,26 @@ $box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 1024px) {
-  .statsContainer{
+  .statsContainer {
     display: flex;
     flex-wrap: wrap;
     padding-right: 5%;
   }
-    .statsBox{
-      width: 47% !important;
-
-    }
-
+  .statsBox {
+    width: 47% !important;
   }
-@media (max-width: 480px) {
-.dashboardContainer{
-  padding-left: 5%;
 }
-  .statsContainer{
+@media (max-width: 480px) {
+  .dashboardContainer {
+    padding-left: 5%;
+  }
+  .statsContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100% !important;
   }
-    .statsBox{
-      width: 100% !important;
-
-    }
-  
+  .statsBox {
+    width: 100% !important;
+  }
 }

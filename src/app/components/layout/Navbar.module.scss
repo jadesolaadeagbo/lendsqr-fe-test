@@ -1,7 +1,7 @@
 // Define variables
-$primary-color: #213F7D;
-$secondary-color: #39CDCC;
-$font-primary: "Work Sans", sans-serif;
+$primary-color: #213f7d;
+$secondary-color: #39cdcc;
+$font-primary: 'Work Sans', sans-serif;
 $shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 $border-color: rgba(84, 95, 125, 0.5);
 
@@ -29,9 +29,8 @@ $border-color: rgba(84, 95, 125, 0.5);
   text-decoration: underline;
   display: block;
 }
-.searchbar{
+.searchbar {
   display: block;
-
 }
 .searchicon {
   background-color: $secondary-color;
@@ -90,36 +89,30 @@ $border-color: rgba(84, 95, 125, 0.5);
   padding-left: 5px;
 }
 
-.hamburger{
+.hamburger {
   display: none;
 }
-
 
 @media (max-width: 820px) {
   .searchInput {
     width: 180px;
   }
 
-  .hamburger{
+  .hamburger {
     display: block;
-      background: none;
-      border: none;
-      font-size: 20px;
-      cursor: pointer;
-    
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
   }
 }
 
 @media (max-width: 480px) {
-
-
-
-
-  .searchbar{
+  .searchbar {
     display: none;
   }
 
-  .navRight{
+  .navRight {
     display: none;
   }
 }

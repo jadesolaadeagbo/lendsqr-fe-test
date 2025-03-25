@@ -1,7 +1,7 @@
-import { FC } from "react";
-import React from "react";
-import styles from "./Pagination.module.scss";
-import Image from "next/image";
+import { FC } from 'react';
+import React from 'react';
+import styles from './Pagination.module.scss';
+import Image from 'next/image';
 
 interface PaginationProps {
   totalItems: number;
@@ -16,7 +16,7 @@ const Pagination: FC<PaginationProps> = ({
   rowsPerPage,
   currentPage,
   onPageChange,
-  onRowsPerPageChange,
+  onRowsPerPageChange
 }) => {
   const totalPages = Math.ceil(totalItems / rowsPerPage);
   const generatePagination = () => {
@@ -24,10 +24,14 @@ const Pagination: FC<PaginationProps> = ({
     const delta = 2;
 
     for (let i = 1; i <= totalPages; i++) {
-      if (i === 1 || i === totalPages || (i >= currentPage - delta && i <= currentPage + delta)) {
+      if (
+        i === 1 ||
+        i === totalPages ||
+        (i >= currentPage - delta && i <= currentPage + delta)
+      ) {
         pages.push(i);
-      } else if (pages[pages.length - 1] !== "...") {
-        pages.push("...");
+      } else if (pages[pages.length - 1] !== '...') {
+        pages.push('...');
       }
     }
     return pages;
@@ -37,7 +41,10 @@ const Pagination: FC<PaginationProps> = ({
     <div className={styles.paginationContainer}>
       <div className={styles.rowsSelector}>
         <label>Showing</label>
-        <select value={rowsPerPage} onChange={(e) => onRowsPerPageChange(Number(e.target.value))}>
+        <select
+          value={rowsPerPage}
+          onChange={(e) => onRowsPerPageChange(Number(e.target.value))}
+        >
           {[10, 20, 30, 50].map((size) => (
             <option key={size} value={size}>
               {size}
@@ -53,30 +60,40 @@ const Pagination: FC<PaginationProps> = ({
           onClick={() => onPageChange(currentPage - 1)}
           disabled={currentPage === 1}
         >
-            <Image src="/images/angleLeft.svg" width={10} height={10} alt="Angle Left"/>
-
+          <Image
+            src="/images/angleLeft.svg"
+            width={10}
+            height={10}
+            alt="Angle Left"
+          />
         </button>
-        
+
         <div className={styles.buttons}>
           {generatePagination().map((page, index) => (
             <button
               key={index}
-              className={`${styles.numberButton} ${currentPage === page ? styles.active : ""}`}
-              onClick={() => typeof page === "number" && onPageChange(page)}
-              disabled={page === "..."}
+              className={`${styles.numberButton} ${
+                currentPage === page ? styles.active : ''
+              }`}
+              onClick={() => typeof page === 'number' && onPageChange(page)}
+              disabled={page === '...'}
             >
               {page}
             </button>
           ))}
         </div>
 
-
         <button
           className={styles.pageButton}
           onClick={() => onPageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
         >
-          <Image src="/images/angleRight.svg" width={10} height={10} alt="Angle Right"/>
+          <Image
+            src="/images/angleRight.svg"
+            width={10}
+            height={10}
+            alt="Angle Right"
+          />
         </button>
       </div>
     </div>

@@ -1,17 +1,15 @@
-"use client"
-import React from 'react'
-import DashboardStats from '../components/User/DashboardStats/DashboardStats'
-import UserTable from '../components/User/UserTable/UserTable'
+'use client';
+import React from 'react';
+import DashboardStats from '../components/User/DashboardStats/DashboardStats';
+import UserTable from '../components/User/UserTable/UserTable';
 
 const DashboardPage = () => {
-  
   return (
     <div>
-      <DashboardStats/>
-      <UserTable/>
-
+      <DashboardStats />
+      <UserTable />
     </div>
-  )
-}
+  );
+};
 
-export default DashboardPage
+export default DashboardPage;

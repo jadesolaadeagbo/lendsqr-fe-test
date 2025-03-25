@@ -5,7 +5,7 @@
 }
 
 .logo {
-  position: absolute; 
+  position: absolute;
   z-index: 50;
   top: 100px;
   left: 97px;
@@ -17,8 +17,8 @@
   background-color: #fbfbfb;
   display: flex;
   flex-direction: column;
-  align-items: center; 
-  justify-content: center; 
+  align-items: center;
+  justify-content: center;
 
   .signinImage {
     display: flex;
@@ -26,22 +26,21 @@
     justify-content: center;
     width: 80%;
     height: 400px;
-
   }
 }
 
 .signinRight {
-  font-family: "Avenir Next", sans-serif;
+  font-family: 'Avenir Next', sans-serif;
   width: 35%;
   padding-left: 100px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 
   p {
-    color: #545F7D;
+    color: #545f7d;
   }
 
   button {
-    background-color: #39CDCC;
+    background-color: #39cdcc;
     padding: 10px 50px;
     border: none;
     border-radius: 4px;
@@ -61,30 +60,30 @@
   input {
     padding: 10px 50px 10px 5px;
     border-radius: 4px;
-    border: 2px solid #545F7D26;
+    border: 2px solid #545f7d26;
 
-    &::placeholder { 
-      color: #545F7D;
+    &::placeholder {
+      color: #545f7d;
       opacity: 0.5;
     }
   }
 }
 
 .welcome {
-  color: #213F7D;
-  font-size: 40px; 
-  font-weight: 700; 
+  color: #213f7d;
+  font-size: 40px;
+  font-weight: 700;
 }
 
 .emailWrapper {
   input {
-    width: 100%; 
+    width: 100%;
     padding: 10px 50px 10px 5px;
     border-radius: 4px;
-    border: 2px solid #545F7D26;
+    border: 2px solid #545f7d26;
 
     &::placeholder {
-      color: #545F7D;
+      color: #545f7d;
       opacity: 0.5;
     }
   }
@@ -94,54 +93,52 @@
   position: relative;
   display: flex;
   align-items: center;
-  width: 100%; 
+  width: 100%;
 
   input {
-    width: 100%; 
+    width: 100%;
     padding: 10px 50px 10px 5px;
     border-radius: 4px;
-    border: 2px solid #545F7D26;
+    border: 2px solid #545f7d26;
 
     &::placeholder {
-      color: #545F7D;
+      color: #545f7d;
       opacity: 0.5;
     }
   }
 
   .showPassword {
     position: absolute;
-    right: 15px; 
+    right: 15px;
     font-size: 10px;
-    color: #39CDCC;
+    color: #39cdcc;
     font-weight: 600;
     cursor: pointer;
   }
 }
 
-
 .errorText {
-  color: #d9534f !important; 
-  font-size: 12px; 
+  color: #d9534f !important;
+  font-size: 12px;
   margin-top: 4px;
   font-weight: 500;
 }
 
 .inputError {
-  border: 1px solid #d9534f !important; 
-  background-color: #ffe6e6; 
+  border: 1px solid #d9534f !important;
+  background-color: #ffe6e6;
 }
 
 .inputError:focus {
   outline: none;
-  border-color: #c9302c; 
+  border-color: #c9302c;
 }
-
 
 @media (min-width: 320px) and (max-width: 480px) {
   .signinLeft {
     display: none;
   }
-  
+
   .logo {
     width: 100px;
     height: 36px;
@@ -159,11 +156,9 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px)  {
+@media (min-width: 768px) and (max-width: 1024px) {
   .signinRight {
     width: 45%;
     padding-left: 3.5%;
   }
-
 }
-
