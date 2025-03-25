@@ -3,9 +3,7 @@ export const fetchUsers = async () => {
     const response = await fetch(
       'https://api.json-generator.com/templates/5In0JpGFjX7N/data',
       {
-        headers: {
-          Authorization: 'Bearer 4duvhxdkmbdxj9yhubb0snydhm8sevrywnclbqv1'
-        }
+        headers: { Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_KEY}` },
       }
     );
 

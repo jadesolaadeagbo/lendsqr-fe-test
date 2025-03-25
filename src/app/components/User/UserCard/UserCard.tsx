@@ -13,24 +13,23 @@ const UserCard = () => {
 
   const params = useParams();
   const id = params?.id;
-
   useEffect(() => {
     if (!id) return;
-
-    const storedUser = localStorage.getItem(`user-${id}`);
-
-    if (storedUser) {
-      setUser(JSON.parse(storedUser));
-      setLoading(false);
-    } else {
-      fetchUserDetails(id as string)
-        .then((data) => {
-          setUser(data as User | null);
-          localStorage.setItem(`user-${id}`, JSON.stringify(data));
-        })
-        .finally(() => setLoading(false));
-    }
+  
+    console.log("Fetching user with ID:", id);
+  
+    fetchUserDetails(id as string)
+      .then((data) => {
+        console.log("Fetched user data:", data); // Debugging line
+        setUser(data as User | null);
+        localStorage.setItem(`user-${id}`, JSON.stringify(data));
+      })
+      .catch((error) => {
+        console.error("Error fetching user:", error);
+      })
+      .finally(() => setLoading(false));
   }, [id]);
+  
 
   if (loading) {
     return <div className={styles.loader}>Loading...</div>;
