@@ -25,11 +25,11 @@
 First, install the dependencies:
 
 npm install
-# or
+or
 yarn install
-# or
+or
 pnpm install
-# or
+or
 bun install
 
 ## Running the Development Server
@@ -37,11 +37,11 @@ bun install
 Start the development server with the following command:
 
 npm run dev
-# or
+or
 yarn dev
-# or
+or
 pnpm dev
-# or
+or
 bun dev
 
 Then, open http://localhost:3000 in your browser to view the application.
