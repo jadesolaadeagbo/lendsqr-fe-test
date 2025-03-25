@@ -123,6 +123,25 @@
   }
 }
 
+
+.errorText {
+  color: #d9534f !important; 
+  font-size: 12px; 
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.inputError {
+  border: 1px solid #d9534f !important; 
+  background-color: #ffe6e6; 
+}
+
+.inputError:focus {
+  outline: none;
+  border-color: #c9302c; 
+}
+
+
 @media (min-width: 320px) and (max-width: 480px) {
   .signinLeft {
     display: none;
@@ -145,19 +164,11 @@
   }
 }
 
-.errorText {
-  color: #d9534f !important; 
-  font-size: 12px; 
-  margin-top: 4px;
-  font-weight: 500;
+@media (min-width: 768px) and (max-width: 1024px)  {
+  .signinRight {
+    width: 45%;
+    padding-left: 3.5%;
+  }
+
 }
 
-.inputError {
-  border: 1px solid #d9534f !important; 
-  background-color: #ffe6e6; 
-}
-
-.inputError:focus {
-  outline: none;
-  border-color: #c9302c; 
-}
