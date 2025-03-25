@@ -46,3 +46,19 @@ $primary-color: #213F7D;
     font-weight: 500;
     color: $primary-color;
 }
+
+  @media(max-width: 1024px){
+    .details{
+      width: 75%;
+    }
+  }
+
+  @media(max-width: 480px){
+    .details{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 10px;
+    }
+  }

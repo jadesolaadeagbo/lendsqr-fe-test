@@ -145,8 +145,10 @@ $text-light: #545F7D;
     align-items: center ;
 }
 
-@media (max-width: 768px) {
-    @media (max-width: 768px) {
+@media (max-width: 1024px) {
+        .card{
+            width: 75%;
+        }
         .cardsContainer {
             flex-direction: column;
             align-items: flex-start;
@@ -172,5 +174,10 @@ $text-light: #545F7D;
             }
         }
     }
+
+    @media (max-width: 480px) {
+        .card{
+            width: 100%;
+        }
+    }
     
-}

@@ -5,18 +5,6 @@ import { fetchUserDetails } from "../../../services/fetchUserDetails";
 import { useParams } from "next/navigation";
 import { User } from "../../../services/fetchUserDetails";
 
-// export interface User {
-//   id: Record<number, number>
-//   personalInformation: Record<string, string>;
-//   educationEmployment: Record<string, string>;
-//   socials: Record<string, string>;
-//   guarantor: { [key: string]: string }[];
-// }
-
-
-
-
-
 
 const UserProfile: React.FC = () => {
   const [user, setUser] = useState<User | null>(null);
@@ -24,7 +12,7 @@ const UserProfile: React.FC = () => {
   const params = useParams();
   const id = params?.id;
 
-
+ 
 
   useEffect(() => {
     if (!id) return;
@@ -32,13 +20,13 @@ const UserProfile: React.FC = () => {
     const storedUser = localStorage.getItem(`user-${id}`);
 
     if (storedUser) {
-      setUser(JSON.parse(storedUser)); // Load user from localStorage
+      setUser(JSON.parse(storedUser));
       setLoading(false);
     } else {
       fetchUserDetails(id as string)
         .then((data) => {
           setUser(data);
-          localStorage.setItem(`user-${id}`, JSON.stringify(data)); // Store in localStorage
+          localStorage.setItem(`user-${id}`, JSON.stringify(data));
         })
         .finally(() => setLoading(false));
     }
@@ -144,7 +132,7 @@ const UserProfile: React.FC = () => {
       </div>
   
       {/* Guarantor */}
-      <div className={styles.guarantorCategory}>
+      <div>
         <h2 className={styles.categoryTitle}>Guarantor</h2>
         {user?.guarantor?.map((guarantor, i) => (
           <div key={i} className={`${styles.category} ${i === user?.guarantor.length - 1 ? styles.lastGuarantor : ""}`}>

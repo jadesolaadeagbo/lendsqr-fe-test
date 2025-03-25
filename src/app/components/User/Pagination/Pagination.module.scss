@@ -10,7 +10,10 @@ $bg-light: rgba(33, 63, 125, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0 0 0;
+  font-family: var(--font-work-sans);
+  padding-top: 30px;
+  padding-left: 5%;
+  padding-bottom: 100px;
 
   .rowsSelector {
     display: flex;
@@ -75,5 +78,13 @@ $bg-light: rgba(33, 63, 125, 0.1);
 
   .active {
     color: $text-primary !important;
+  }
+}
+
+
+@media(max-width: 1024px){
+  .paginationContainer{
+    width: 100%;
+    padding-right: 5%;
   }
 }

@@ -125,8 +125,10 @@ $shadow-color: rgba(0, 0, 0, 0.1);
     }
 
   }
+}
 
-  @media (max-width: 768px) {
+  @media (max-width: 820px) {
+    .sidebar{
     width: 200px;
     padding: 10px;
 
@@ -136,4 +138,24 @@ $shadow-color: rgba(0, 0, 0, 0.1);
       font-size: 14px;
     }
   }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background: white;
+    transition: left 0.3s ease-in-out;
+  }
+  
+  .sidebar.open {
+    left: 0; 
+  }
 }
+
+  @media(max-width: 480px){
+
+    
+  }
+

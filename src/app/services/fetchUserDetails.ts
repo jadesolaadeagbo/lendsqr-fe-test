@@ -49,9 +49,6 @@ export const fetchUserDetails = async (userId: string) => {
   
       // const users = await response.json();
       const users = (await response.json()) as User[];
-
-  
-      console.log("Fetched Users:", users.slice(0, 5)); 
   
       const numericUserId = Number(userId);
       if (isNaN(numericUserId)) {

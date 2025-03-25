@@ -10,7 +10,7 @@ const UserDetails = () => {
   const redirectUser = () =>{
     router.push(`/dashboard`); 
   }
-  return (
+  return ( 
     <section className={styles.section}>
 
       <div className={styles.heading}>

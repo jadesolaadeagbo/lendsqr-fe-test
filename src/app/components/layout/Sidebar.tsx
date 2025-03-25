@@ -30,7 +30,11 @@ import {
   logout
 } from "../../utils";
 
-const Sidebar = () => {
+interface SidebarProps {
+  isSidebarOpen: boolean;
+}
+
+const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen }) => {
   const router = useRouter();
 
   const menuItems = [
@@ -66,7 +70,7 @@ const Sidebar = () => {
   ];
 
   return (
-    <aside className={styles.sidebar}>
+    <aside className={`${styles.sidebar} ${isSidebarOpen ? styles.open : ''}`}>
       <div className={styles.sidebarInner}>
 
 

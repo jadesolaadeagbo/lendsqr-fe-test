@@ -19,10 +19,6 @@ $text-light: #545F7D;
     border-bottom: 1px solid rgba(33, 63, 125, 0.1);
     padding-bottom: 24px;
   }
-
-  .guarantorCategory {
-
-  }
   
   .categoryTitle {
     font-size: 16px;
@@ -73,3 +69,14 @@ $text-light: #545F7D;
     padding-top: 24px;
   }
 
+  @media(max-width: 1024px){
+    .card{
+      width: 75%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .card{
+        width: 100%;
+    }
+  }

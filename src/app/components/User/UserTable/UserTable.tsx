@@ -26,8 +26,6 @@ const UserTable = () => {
   const [rowsPerPage, setRowsPerPage] = useState(10);
 
 
-
-
   useEffect(() => {
     const loadUsers = async () => {
       setLoading(true);
@@ -65,23 +63,22 @@ const UserTable = () => {
   };
 
 
-  
-
   // Pagination
   const totalItems = users.length; 
   const paginatedUsers = users.slice((currentPage - 1) * rowsPerPage, currentPage * rowsPerPage);
 
   return (
-    <div className={styles.tableContainer}>
+    <>
+        <div className={styles.tableContainer}>
       <table className={styles.table}>
         <thead >
           <tr className={styles.tableRow}>
             {["organization", "username", "email", "phone", "dateJoined", "status"].map((col, id) => (
               <th key={col} onClick={() => handleSort(col as keyof typeof users[0])} className={id === 0 ? styles.firstTh : styles.th} style={{fontWeight:"500", textTransform: "uppercase", backgroundColor: "white", fontSize:"12px", color: "#545F7D"}}>
-
+                <p>
                 {col.charAt(0).toUpperCase() + col.slice(1)} 
                 <FilterPopup onApply={(filters) => console.log(filters)} />
-
+                </p>
               </th>
             ))}
           </tr>
@@ -106,8 +103,9 @@ const UserTable = () => {
         </tbody>
 
       </table>
+    </div>
 
-      <Pagination
+    <Pagination
         totalItems={totalItems}
         rowsPerPage={rowsPerPage}
         currentPage={currentPage}
@@ -117,10 +115,8 @@ const UserTable = () => {
           setCurrentPage(1); 
         }}
       />
+    </>
 
-
-
-    </div>
   );
 };
 

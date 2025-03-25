@@ -32,6 +32,7 @@ export default function Layout({
   const [loading, setLoading] = useState(true);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const router = useRouter();
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false); 
 
   useEffect(() => {
     const auth = Cookies.get("auth");
@@ -64,9 +65,9 @@ export default function Layout({
 
   return (
     <div className={`${workSans.className} ${sfCompact.className}`}>
-      <Navbar />
+      <Navbar  isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} />
       <main className={styles.container}>
-        <Sidebar />
+        <Sidebar  isSidebarOpen={isSidebarOpen}  />
         <section className={styles.mainLayout}>{children}</section>
       </main>
     </div>
