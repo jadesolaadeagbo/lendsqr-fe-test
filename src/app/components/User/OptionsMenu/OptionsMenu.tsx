@@ -24,7 +24,7 @@ const OptionsMenu: React.FC<OptionsMenuProps> = ({ rowId }) => {
   return (
     <div className={styles.optionsMenu} ref={menuRef}>
       <button onClick={toggleMenu} className={styles.optionButton}>
-        <img src="/images/option.svg" width={15} height={15} alt="Option icon" />
+        <Image src="/images/option.svg" width={15} height={15} alt="Option icon" />
       </button>
       
       {isOpen && (

@@ -31,7 +31,7 @@ const UserCard = () => {
     } else {
       fetchUserDetails(id as string)
         .then((data) => {
-          setUser(data);
+          setUser(data as User  | null);
           localStorage.setItem(`user-${id}`, JSON.stringify(data)); // Store in localStorage
         })
         .finally(() => setLoading(false));

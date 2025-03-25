@@ -11,7 +11,9 @@ export const fetchUserDetails = async (userId: string) => {
         throw new Error("Failed to fetch user details");
       }
   
-      const users = await response.json();
+      // const users = await response.json();
+      const users = (await response.json()) as unknown as { id: number }[];
+
   
       console.log("Fetched Users:", users.slice(0, 5)); 
   
@@ -21,7 +23,8 @@ export const fetchUserDetails = async (userId: string) => {
         return null;
       }
   
-      const user = users.find((user: any) => user.id === numericUserId);
+      
+      const user = users.find((user) => user.id === numericUserId);
   
       if (!user) {
         console.warn(`User with ID ${numericUserId} not found`);

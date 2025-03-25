@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "./FilterPopup.module.scss"; // Ensure you create this CSS file
 
 interface FilterPopupProps {
-  onApply: (filters: any) => void;
+  onApply:  (filters: unknown) => void;
 }
 
 const FilterPopup: React.FC<FilterPopupProps> = ({ onApply }) => {
