@@ -2,9 +2,13 @@
 
 ## Technologies Used
 - Next.js – Handles routing, rendering, and managing cookies and fonts.
+
 - TypeScript – Provides type safety and improved code maintainability.
+  
 - SCSS – Used for styling and better modularity.
+  
 - JSON Generator – Generates mock APIs for testing purposes.
+  
 - Vercel – Deployment platform for seamless hosting and performance.
 
 ## Features and Functionalities
@@ -13,6 +17,8 @@
 - Mobile Responsiveness – Ensures a seamless experience across all mobile devices.
 
 - Pagination – Enables efficient navigation through large data sets.
+  
+- Simple Loaders – Improves user experience with visual indicators during data fetching.
 
 - Mock User Authentication – User sessions are stored in cookies for 24 hours, after which they are automatically logged out.
 
@@ -81,5 +87,11 @@ Follow the prompts to complete the deployment.
 
 This project is open-source and available for modification and distribution.
 
+## User Interface
+
+<img width="1436" alt="Screenshot 2025-03-25 at 23 54 51" src="https://github.com/user-attachments/assets/90260cc1-8646-4ee3-9011-8868c0eb7fb3" />
+<img width="1438" alt="Screenshot 2025-03-25 at 23 54 31" src="https://github.com/user-attachments/assets/e47e4d37-7f53-46da-b81f-48328edd92f4" />
+<img width="1440" alt="Screenshot 2025-03-25 at 23 53 54" src="https://github.com/user-attachments/assets/3de52187-41c7-45e7-bade-95c8bdca0b19" />
+<img width="1440" alt="Screenshot 2025-03-25 at 23 53 20" src="https://github.com/user-attachments/assets/a51b3f20-e474-43d3-8a7f-f0a54aca0cc8" />
 
 
