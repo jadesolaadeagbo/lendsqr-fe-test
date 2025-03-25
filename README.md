@@ -43,6 +43,24 @@ yarn dev
 
 Then, open http://localhost:3000 in your browser to view the application.
 
+## Project Structure
+src/  
+│── app/  
+│   ├── components/      # Reusable UI components  
+│   ├── dashboard/       # Dashboard-related pages and components  
+│   ├── services/        # API calls and data-fetching logic  
+│   ├── utils/           # Helper functions and utilities  
+│   ├── layout.tsx       # Global layout configuration (imports fonts, wrappers)  
+│   ├── page.tsx         # Root page of the application  
+
+
+- components/: Houses UI elements like the navbar, sidebar, table, and cards.
+- dashboard/: Contains dashboard-specific components and pages for user interactions.
+- services/: Manages API requests and data fetching from external sources.
+- utils/: Includes helper functions, formatters, and other utility functions.
+- layout.tsx: This file is responsible for setting up the global layout and importing fonts.
+- page.tsx: The root entry point of the application, handling the main page rendering.
+
 ## Editing the Project
 
 You can modify the application by editing app/page.tsx. Changes will be automatically reflected in the browser.
