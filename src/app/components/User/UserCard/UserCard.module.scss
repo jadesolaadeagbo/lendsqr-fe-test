@@ -171,6 +171,12 @@ $text-light: #545f7d;
   }
 }
 
+@media (max-width: 820px) {
+  .card {
+    width: 100% !important;
+  }
+}
+
 @media (max-width: 480px) {
   .card {
     width: 100%;
